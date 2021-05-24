@@ -50,8 +50,12 @@ fdescribe("fibLength", () => {
   var output1 = [1, 1, 2, 3, 5, 8]
   var outPut2 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
   
-  const fibLength = (array) => {
-  return array.map(value(outPut1, outPut2))
+  const fibLength = () => {
+  let fibArray = [1, 1]
+  for( let i=1 ; i<array -1; i++){
+  fibArray.push(fibArray[i] + fibArray[i-1])
+  }
+  return fibArray
   }
   
   
@@ -135,3 +139,6 @@ fdescribe("fibLength", () => {
       })
   }
   console.log(newArr)
+  //I ran into some problems here getting it to function properly it wasnt able to read it
+  //It kept coming back as test suit failed and I'm not sure why
+  //I ended up not being able to fully complete this solely due to time restraints, and having to deal with issues with my family. It wont happen again.
